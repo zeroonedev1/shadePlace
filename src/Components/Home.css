@@ -1,0 +1,39 @@
+section{
+    color: whitesmoke;
+    height: 78px;
+}
+.bodymain{
+    display: flex;
+    flex: 4;
+    flex-wrap: wrap;
+    height: 86vh;
+
+}
+.left {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    height: fit-content;
+    margin-top: 5%;
+}
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 2;
+}
+
+.imagemain{
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+}
+.box{
+width: 300px;
+height: 400px;
+border: 1px solid white;
+margin-right: 65px;
+position: absolute;
+}
