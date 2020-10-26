@@ -3,14 +3,15 @@ import { db } from "./Firebase";
 import "./Form.css";
 
 const Form = () => {
-  const [name, setName] = useState("");
+  const [venue, setvenue] = useState("");
+  const [senderName, setname] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     db.collection("place")
       .add({
-        spotName: name,
+        spotName: venue,
+        senderName: senderName,
       })
       .then(() => {
         alert("Message has been submitted");
@@ -18,19 +19,28 @@ const Form = () => {
       .catch((error) => {
         alert(error.message);
       });
-
-    setName("");
+    setname("");
+    setvenue("");
   };
   return (
     <div>
+      <p>My name is</p>
+      <input
+        type="text"
+        placeholder=""
+        value={senderName}
+        onChange={(e) => setname(e.target.value)}
+      ></input>
+      <p>& I think</p>
       <form className="form" onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="so...there is this place...."
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          placeholder="this place...."
+          value={venue}
+          onChange={(e) => setvenue(e.target.value)}
         ></input>
         <button type="submit">🤘</button>
+        <p>is awesome and underated</p>
       </form>
     </div>
   );

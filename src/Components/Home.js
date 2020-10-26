@@ -1,32 +1,46 @@
 import React from "react";
 import "./Home.css";
-import arrow from "../Assets/arrow.jpg";
-import Form from './Form'
+import Form from "./Form";
+// import PlacesListFirebase from './PlacesListFirebase';
 
-function Home() {
+
+const Home = () => {
   return (
-    <div>
-      <section>ANK GIDC</section>
+    <div className="contain">
+      <p>393002 is awesome!!</p>
+      <div class="stars">
+        <div class="small"></div>
+        <div class="medium"></div>
+        <div class="big"></div>
+      </div>
       <div className="bodymain">
         <div className="left">
-          <p>A place thats awesome and underated </p>
-          <div>
-           <Form/>
-          </div>
+          <Form />
         </div>
         <div className="right">
           <div className="imagemain">
             <img
               alt="timer"
-              width={"600px"}
-              src={require("../Assets/arrow.jpg")}
+              width={"500px"}
+              height={"402px"}
+              src={require("../Assets/map.png")}
             />
-            <div className="box"></div>
+          </div>
+          <div class="fire">
+            <div class="flames">
+              <div class="flame"></div>
+              <div class="flame"></div>
+              <div class="flame"></div>
+              <div class="flame"></div>
+            </div>
+            <div class="logs"></div>
+            <div class="logs"></div>
           </div>
         </div>
       </div>
+      {/* <PlacesListFirebase/> */}
     </div>
   );
-}
+};
 
 export default Home;
