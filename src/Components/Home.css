@@ -22,7 +22,6 @@ section {
 }
 .right {
   display: flex;
-  /* align-items: center; */
   justify-content: center;
   flex: 2;
 }
@@ -41,19 +40,8 @@ body .fire {
   transform: translate(-50%, -25%);
   height: 8vw;
   width: 8vw;
-  -webkit-animation: glow 9s ease-in-out infinite alternate;
-  -moz-animation: glow 9s ease-in-out infinite alternate;
-  animation: glow 9s ease-in-out infinite alternate;
 }
-@-webkit-keyframes glow {
-  from {
-    box-shadow: 0 0 100px #fff, 0 0 200px #fff, 0 0 300px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-  }
-  
-  to {
-    box-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-  }
-}
+
 body .fire .flames {
   position: absolute;
   bottom: 40%;
@@ -382,19 +370,9 @@ body .fire .logs:before {
 /* Tooltip */
 
 html,body{
-  /* height: 100%; */
   background: #212121;
-  /* font-family: 'Ubuntu', sans-serif; */
-  /* line-height: 24px; */
-  /* letter-spacing: 1px; */
 }
 .item-hints{
-  /* height: 5px; */
-  /* width: 5px; */
-  /* display: flex; */
-  /* align-items: center; */
-    /* justify-content: flex-end; */
-    /* width: max-content; */
     position: absolute;
     left: 13%;
     z-index: 5;
@@ -404,12 +382,7 @@ html,body{
 .item-hints .hint {
   width: 60px;
   height: 60px;
-  /* margin: 150px auto; */
   position: relative;
-  /* background-color: red; */
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
 }
 .item-hints .hint::before{ /* //rotated squre */
   background-color: red;
