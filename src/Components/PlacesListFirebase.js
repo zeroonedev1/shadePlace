@@ -1,58 +1,53 @@
 import React, { Component } from "react";
-// import firebase from "./Firebase";
+import * as firebase from "firebase";
+import "firebase/firestore";
+import "./PlacesListFirebase.css";
 
 export class PlacesListFirebase extends Component {
   constructor(props) {
     super(props);
-    this.state = { placeslist: [] };
+    this.state = {
+      finalArray: [],
+    };
   }
 
   componentDidMount() {
-    firebase
-      .database()
-      .ref("places-list")
-      .on("value", (snapshot) => {
-        let placeslist = [];
-        snapshot.forEach((snap) => {
-          // snap.val() is the dictionary with all your keys/values from the 'students-list' path
-          placeslist.push(snap.val());
-        });
-        this.setState({ placeslist: placeslist });
+    console.log("mounted");
+    let database = firebase.firestore();
+    let query = database.collection("place");
+    let data = [];
+    query.get().then((querySnapshot) => {
+      querySnapshot.forEach((documentSnapshot) => {
+        data.push(documentSnapshot.data());
       });
+      this.setState({
+        finalArray: data,
+      });
+      console.log("Final Array", this.state.finalArray);
+    });
   }
-
   render() {
     return (
-      <div>
-        <div className="MainDiv">
-          <div class="jumbotron text-center bg-sky">
-            <h3>How to show firebase data in reactjs?</h3>
-          </div>
+      <div className="MainDiv">
+        <div className="text-center bg-sky">
+          {/* <h3>How to show firebase data in reactjs?</h3> */}
+        </div>
+        <div className="table-wrap">
+          <table id="example" className="">
+            <tbody>
+              {this.state.finalArray.map((place, index) => (
+                <tr key={index} className="scroll-list">
+                  <li className="scroll-list__item">
+                    <p className="submitted-place">{place.spotName}</p>
 
-          <div className="container">
-            <table id="example" class="display table">
-              <thead class="thead-dark">
-                <tr>
-                  <th>FirstName</th>
-                  <th>Lastname</th>
-                  <th>Email</th>
-                  <th>Mobile</th>
+                    <p className="submitor-name">
+                      -tossed by <mark>{place.senderName} </mark>
+                    </p>
+                  </li>
                 </tr>
-              </thead>
-              <tbody>
-                {this.state.placeslist.map((data) => {
-                  return (
-                    <tr>
-                      <td>{data.firstName}</td>
-                      <td>{data.lastName}</td>
-                      <td>{data.email}</td>
-                      <td>{data.mobileNumber}</td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     );

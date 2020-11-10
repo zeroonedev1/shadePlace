@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { db } from "./Firebase";
+import {db} from './Firebase'  
+// import db from './Firebase' 
+
 import "./Form.css";
 
 const Form = () => {
@@ -39,7 +41,7 @@ const Form = () => {
           value={venue}
           onChange={(e) => setvenue(e.target.value)}
         ></input>
-        <button type="submit">🤘</button>
+        <button type="submit"><span role='img' alt='send'>🤘</span></button>
         <p>is awesome and underated</p>
       </form>
     </div>

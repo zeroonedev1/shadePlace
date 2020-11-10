@@ -34,13 +34,25 @@ p {
 
 /* FIREEEEEEEEEEEEEEEEEE */
 body .fire {
-  position: absolute;
+  position: fixed;
   top: 84%;
   right: 85%;
   -webkit-transform: translate(-50%, -25%);
   transform: translate(-50%, -25%);
   height: 8vw;
   width: 8vw;
+  -webkit-animation: glow 9s ease-in-out infinite alternate;
+  -moz-animation: glow 9s ease-in-out infinite alternate;
+  animation: glow 9s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glow {
+  from {
+    box-shadow: 0 0 100px #fff, 0 0 200px #fff, 0 0 300px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    box-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
 }
 body .fire .flames {
   position: absolute;
@@ -259,7 +271,7 @@ body .fire .logs:before {
 .stars {
   overflow: hidden;
   width: 100%;
-  height: 80%;
+  height: 100vh;
   position: absolute;
 }
 
@@ -283,6 +295,29 @@ body .fire .logs:before {
     1779px 3117px #767676, 3697px 2277px #767676, 2279px 331px #767676,
     1303px 3291px #767676, 2771px 226px #767676, 1049px 934px #767676,
     776px 186px #767676, 1861px 1602px #767676, 1494px 1176px #767676,
+    392px 2417px #767676, 288px 678px #767676, 2007px 1083px #767676,
+    #767676,
+    776px 186px #767676, 1861px 1602px #767676, 1494px 1176px #767676,
+    392px 2417px #767676, 288px 678px #767676, 2007px 1083px #767676, 3799px 2996px #767676, 1189px 2983px #767676, 1976px 3957px #767676,
+    1106px 117px #767676, 1460px 2765px #767676, 730px 666px #767676,
+    2786px 466px #767676, 1230px 1451px #767676, 3033px 2383px #767676,
+    876px 927px #767676, 2419px 3864px #767676, 2525px 560px #767676,
+    1779px 3117px #767676, 3697px 2277px #767676, 2279px 331px #767676,
+    1303px 3291px #767676, 2771px 226px #767676, 1049px 934px #767676,
+    776px 186px #767676, 1861px 1602px #767676, 1494px 1176px #767676,
+    392px 2417px #767676, 288px 678px #767676, 2007px 1083px #767676,
+    #767676,
+    776px 186px #767676, 1861px 1602px #767676, 1494px 1176px #767676,
+    392px 2417px #767676, 288px 678px #767676, 2007px 1083px #767676, 3799px 2996px #767676, 1189px 2983px #767676, 1976px 3957px #767676,
+    1106px 117px #767676, 1460px 2765px #767676, 730px 666px #767676,
+    2786px 466px #767676, 1230px 1451px #767676, 3033px 2383px #767676,
+    876px 927px #767676, 2419px 3864px #767676, 2525px 560px #767676,
+    1779px 3117px #767676, 3697px 2277px #767676, 2279px 331px #767676,
+    1303px 3291px #767676, 2771px 226px #767676, 1049px 934px #767676,
+    776px 186px #767676, 1861px 1602px #767676, 1494px 1176px #767676,
+    392px 2417px #767676, 288px 678px #767676, 2007px 1083px #767676,
+    #767676,
+    776px 186px #767676, 1861px 1602px #767676, 1494px 1176px #767676,
     392px 2417px #767676, 288px 678px #767676, 2007px 1083px #767676;
   animation: starsAnimation 150s linear infinite;
 }
@@ -297,16 +332,35 @@ body .fire .logs:before {
     689px 1535px #767676, 1965px 2650px #767676, 980px 1928px #767676,
     3268px 1238px #767676, 2258px 2725px #767676, 2032px 2509px #767676,
     3702px 2424px #767676, 81px 1748px #767676, 3629px 3757px #767676,
+    1800px 478px #767676, 403px 1826px,
+    3268px 1238px #767676, 2258px 2725px #767676, 2032px 2509px #767676,
+    3702px 2424px #767676, 81px 1748px #767676, 3629px 3757px #767676,
+    1800px 478px #767676, 403px 1826px,
+    3268px 1238px #767676, 2258px 2725px #767676, 2032px 2509px #767676,
+    3702px 2424px #767676, 81px 1748px #767676, 3629px 3757px #767676,
+    1800px 478px #767676, 403px 1826px, 3268px 1238px #767676, 2258px 2725px #767676, 2032px 2509px #767676,
+    3702px 2424px #767676, 81px 1748px #767676, 3629px 3757px #767676,
+    1800px 478px #767676, 403px 1826px, 3268px 1238px #767676, 2258px 2725px #767676, 2032px 2509px #767676,
+    3702px 2424px #767676, 81px 1748px #767676, 3629px 3757px #767676,
     1800px 478px #767676, 403px 1826px;
   animation: starsAnimation 100s linear infinite;
 }
-
+ 
 .big {
   width: 6px;
   height: 6px;
   background: white;
   border-radius: 50px;
   box-shadow: 3967px 2692px #767676, 111px 2291px #767676, 2966px 1033px #767676,
+    1200px 3497px #767676, 3596px 2609px #767676, 768px 1912px #767676,
+    88px 322px #767676, 1015px 3048px #767676, 2856px 2301px #767676,
+    2973px 1742px #767676, 2241px 3817px #767676, 1175px 1px #767676,
+    1200px 3497px #767676, 3596px 2609px #767676, 768px 1912px #767676,
+    88px 322px #767676, 1015px 3048px #767676, 2856px 2301px #767676,
+    2973px 1742px #767676, 2241px 3817px #767676, 1175px 1px #767676,  2973px 1742px #767676, 2241px 3817px #767676, 1175px 1px #767676,
+    1200px 3497px #767676, 3596px 2609px #767676, 768px 1912px #767676,
+    88px 322px #767676, 1015px 3048px #767676, 2856px 2301px #767676,
+    2973px 1742px #767676, 2241px 3817px #767676, 1175px 1px #767676,  2973px 1742px #767676, 2241px 3817px #767676, 1175px 1px #767676,
     1200px 3497px #767676, 3596px 2609px #767676, 768px 1912px #767676,
     88px 322px #767676, 1015px 3048px #767676, 2856px 2301px #767676,
     2973px 1742px #767676, 2241px 3817px #767676, 1175px 1px #767676;
@@ -321,4 +375,192 @@ body .fire .logs:before {
   to {
     transform: translate(-2000px, 0px);
   }
+}
+
+
+
+/* Tooltip */
+
+html,body{
+  /* height: 100%; */
+  background: #212121;
+  /* font-family: 'Ubuntu', sans-serif; */
+  /* line-height: 24px; */
+  /* letter-spacing: 1px; */
+}
+.item-hints{
+  /* height: 5px; */
+  /* width: 5px; */
+  /* display: flex; */
+  /* align-items: center; */
+    /* justify-content: flex-end; */
+    /* width: max-content; */
+    position: absolute;
+    left: 13%;
+    z-index: 5;
+    top: 18%;
+    width: fit-content;
+}
+.item-hints .hint {
+  width: 60px;
+  height: 60px;
+  /* margin: 150px auto; */
+  position: relative;
+  /* background-color: red; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+.item-hints .hint::before{ /* //rotated squre */
+  background-color: red;
+  width: 8px;
+  height: 8px;
+  z-index: 2;
+  -webkit-clip-path: polygon(50% 0,100% 50%,50% 100%,0 50%);
+  clip-path: polygon(50% 0,100% 50%,50% 100%,0 50%);
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.item-hints .hint::after{ /* //green glow */
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  width: 2px;
+  height: 2px;
+  z-index: 1;
+  -webkit-box-shadow: 0 0 50px 30px rgba(72,170,72,.3);
+  box-shadow: 0 0 50px 30px rgba(72,170,72,.3);
+  -webkit-animation: home_hero_item_hints_glow 2s cubic-bezier(.25,.1,.2,1) infinite;
+  animation: home_hero_item_hints_glow 2s cubic-bezier(.25,.1,.2,1) infinite;
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+}
+@-webkit-keyframes home_hero_item_hints_glow {
+  0% {
+    -webkit-box-shadow: 0 0 30px 5px #48aa48;
+    box-shadow: 0 0 30px 5px #48aa48
+  }
+  70% {
+    -webkit-box-shadow: 0 0 70px 50px rgba(72, 170, 72, 0);
+    box-shadow: 0 0 70px 50px rgba(72, 170, 72, 0)
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 50px rgba(72, 170, 72, 0);
+    box-shadow: 0 0 0 50px rgba(72, 170, 72, 0)
+  }
+}
+@keyframes home_hero_item_hints_glow {
+  0% {
+    -webkit-box-shadow: 0 0 30px 5px #48aa48;
+    box-shadow: 0 0 30px 5px #48aa48
+  }
+  70% {
+    -webkit-box-shadow: 0 0 70px 50px rgba(72, 170, 72, 0);
+    box-shadow: 0 0 70px 50px rgba(72, 170, 72, 0)
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 50px rgba(72, 170, 72, 0);
+    box-shadow: 0 0 0 50px rgba(72, 170, 72, 0)
+  }
+}
+.item-hints .hint-dot {
+  z-index: 3;
+  border: 2px solid orangered;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  top:27%;
+  left: 29%;
+  position: absolute;
+  display: block;
+  -webkit-transform: translate(-0%,-0%) scale(.95);
+  transform: translate(-0%,-0%) scale(.95);
+  -webkit-animation: home_hero_item_hints_border 2s linear infinite;
+  animation: home_hero_item_hints_border 2s linear infinite;
+  margin: auto;
+}
+@-webkit-keyframes home_hero_item_hints_border {
+  0%,
+  100% {
+    border-color:orangered;
+    -webkit-transform: translate(-50%, -50%) scale(.95);
+    transform: translate(-0%, -0%) scale(.95)
+  }
+  50% {
+    border-color: orangered;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-0%, -0%) scale(1)
+  }
+}
+@keyframes home_hero_item_hints_border {
+  0%,
+  100% {
+    border-color: orangered;
+    -webkit-transform: translate(-50%, -50%) scale(.95);
+    transform: translate(-0%, -0%) scale(.95)
+  }
+  50% {
+    border-color: rgba(255, 255, 255, .3);
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-0%, -0%) scale(1)
+  }
+}
+.item-hints .hint-content {
+  color: #fff;
+  width: 300px;
+  position: absolute;
+  z-index: 5;
+  padding: 12px 0;
+  opacity: 0;
+  /* visibility: hidden; */
+  -webkit-transition: opacity 2s ease,visibility 2s ease;
+  transition: opacity 2s ease,visibility 2s ease;
+  color: #fff;
+  visibility: hidden;
+}
+.item-hints .hint:hover .hint-content {
+  color: #fff;
+  width: 300px;
+  position: absolute;
+  z-index: 5;
+  padding: 12px 0;
+  opacity: 1;
+  visibility: visible !important;
+  -webkit-transition: opacity .2s ease,visibility .2s ease;
+  transition: opacity .2s ease,visibility .2s ease;
+  color: #fff;
+  visibility: hidden;
+}
+.item-hints .hint[data-position="4"] .hint-content {
+  bottom: 85px;
+  left: 50%;
+  margin-left: 56px;
+  background: lightblue;
+  border-radius: 20px;
+  position: relative;
+  z-index: 6;
+}
+
+.textinfo{
+  font-size: 12px!important;
+  line-height: 20px;
+  word-spacing: 8px;
+  color: black;
+  position: relative;
+  z-index: 6;
+}
+.footer{
+  font-size: 12px!important;
+  color: lightsteelblue;
+  word-spacing: 6px;
+
 }
