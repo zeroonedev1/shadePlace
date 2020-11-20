@@ -16,7 +16,7 @@ const Form = () => {
         senderName: senderName,
       })
       .then(() => {
-        alert("Message has been submitted");
+        alert("Thank you for your submittion bro, I love you, refresh to see your entry :)");
       })
       .catch((error) => {
         alert(error.message);
@@ -41,7 +41,7 @@ const Form = () => {
           value={venue}
           onChange={(e) => setvenue(e.target.value)}
         ></input>
-        <button type="submit"><span role='img' alt='send'>🤘</span></button>
+        <button type="submit"><span role='img' alt='send'>✌</span></button>
         <p>is awesome and underated</p>
       </form>
     </div>

@@ -20,8 +20,8 @@ const Home = () => {
           <div className="imagemain">
             <img
               alt="timer"
-              width={"500px"}
-              height={"402px"}
+              width={"570px"}
+              height={"520px"}
               src={require("../Assets/map.png")}
             />
           </div>
@@ -38,9 +38,11 @@ const Home = () => {
                 <span className="hint-dot"></span>
                 <div className="hint-content do--split-children">
                   <p className="textinfo">
-        I have been here in the hood past 3 months and thats the most time I have spend in GIDC since last 7 Years.
-        The Winter Chill brings back all them old memories which lead me to create 393002.
-        Lets share the cooest and unexplored places of Ank.
+                    I have been here at Home past 5 months and thats the
+                    most time I have spend in GIDC since last 7 Years. The
+                    Winter Chill brings back all them old memories which lead me
+                    to create 393002. Lets share the cooest and unexplored
+                    places of Ank.
                   </p>
                 </div>
               </div>
@@ -52,11 +54,18 @@ const Home = () => {
         </div>
       </div>
       <PlacesListFirebase />
-      <p className='footer'>Designed and Developed <mark>❤</mark> by 
-      <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/dholu_effect/"> Shubham Dholu, </a>
-       using 
-      <mark>React</mark>- a Facebook Framework,
-      <mark>FireStore</mark>- a Google Database & the BEST Samosas by<mark>MOM!</mark>
+      <p className="footer">
+        Designed and Developed with <mark>❤</mark> by
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.instagram.com/dholu_effect/"
+        >
+          {" "}
+          Shubham Dholu,{" "}
+        </a>
+        using <strong>React</strong> - a Facebook Framework, <strong>FireStore</strong> - a Google Database & the
+        BEST Samosas by<mark>MOM!</mark>
       </p>
     </div>
   );
