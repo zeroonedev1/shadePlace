@@ -5,7 +5,7 @@ input[type="text"] {
   color: lightskyblue;
   border-radius: 9px;
   height: 54px;
-  width: 420px;
+  width: 100%;
   outline: none;
   position: relative;
   z-index: 5;
@@ -20,8 +20,7 @@ input[type="text"] {
 }
 input:hover{
   box-shadow: 0 0 20px 0 rgba(100, 400, 455, 75);
- 
-  /* box-shadow: 0 0 20px 0 rgba(100, 200, 255, 0.75); */
+  /* box-shadow: url('linear-gradient(147deg, #6e0777 0%, #380c70 74%)'); */
 }
 button {
   height: 54px;

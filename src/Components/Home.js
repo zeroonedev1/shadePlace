@@ -18,12 +18,6 @@ const Home = () => {
         </div>
         <div className="right">
           <div className="imagemain">
-            <img
-              alt="timer"
-              width={"570px"}
-              height={"520px"}
-              src={require("../Assets/map.png")}
-            />
           </div>
           <div className="fire">
             <div className="flames">
