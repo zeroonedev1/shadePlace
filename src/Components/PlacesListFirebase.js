@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import * as firebase from "firebase";
+import firebase from "firebase/app";
 import "firebase/firestore";
 import "./PlacesListFirebase.css";
 
@@ -12,7 +12,7 @@ export class PlacesListFirebase extends Component {
   }
 
   componentDidMount() {
-    console.log("mounted");
+    console.warn("I understand the curiosity, but what good shall this bring bro ? please press f12");
     let database = firebase.firestore();
     let query = database.collection("place");
     let data = [];
@@ -23,7 +23,7 @@ export class PlacesListFirebase extends Component {
       this.setState({
         finalArray: data,
       });
-      console.log("Final Array", this.state.finalArray);
+      // console.log("Final Array", this.state.finalArray);
     });
   }
   render() {
@@ -34,9 +34,9 @@ export class PlacesListFirebase extends Component {
         </div>
         <div className="table-wrap">
           <table id="example" className="">
-            <tbody>
+            <div>
               {this.state.finalArray.map((place, index) => (
-                <tr key={index} className="scroll-list">
+                <div key={index} className="scroll-list">
                   <li className="scroll-list__item">
                     <p className="submitted-place">{place.spotName}</p>
 
@@ -44,9 +44,9 @@ export class PlacesListFirebase extends Component {
                       -tossed by <mark>{place.senderName} </mark>
                     </p>
                   </li>
-                </tr>
+                </div>
               ))}
-            </tbody>
+            </div>
           </table>
         </div>
       </div>

@@ -6,6 +6,7 @@ import PlacesListFirebase from "./PlacesListFirebase";
 const Home = () => {
   return (
     <div className="contain">
+    {console.disableYellowBox = true}
       <p>393002</p>
       <div className="stars">
         <div className="small"></div>
